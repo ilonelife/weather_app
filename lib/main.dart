@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/geo_location.dart';
+import 'package:weather_app/main_screen.dart';
 
 import 'current_weather.dart';
 import 'data_service.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const CurrentWeatherPage(),
+      home: const MainScreen(),
     );
   }
 }
