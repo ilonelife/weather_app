@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/current_weather.dart';
 import 'package:weather_app/geo_location.dart';
+import 'package:weather_app/screens/loading.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -11,8 +12,8 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   final _screen = [
+    const Loading(),
     const CurrentWeatherPage(),
-    const GeoLocation(),
   ];
 
   int _index = 0;
@@ -31,9 +32,9 @@ class _MainScreenState extends State<MainScreen> {
         },
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.thermostat_outlined), label: 'Matt'),
+              icon: Icon(Icons.thermostat_outlined), label: 'Chef'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.air_outlined), label: 'Chef'),
+              icon: Icon(Icons.air_outlined), label: 'Matt'),
         ],
       ),
     );
